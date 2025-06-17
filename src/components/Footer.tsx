@@ -1,46 +1,81 @@
-import SocialMediaFooter from "./SocialMediaFooter";
-import { HiChevronDown } from "react-icons/hi2";
-
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <>
-      <SocialMediaFooter />
-      <footer className="max-w-screen-2xl mx-auto border-b-8 border-secondaryBrown px-5 max-[400px]:px-3">
-        <div className="flex justify-center gap-24 text-center mt-12 max-[800px]:flex-col max-[800px]:gap-10">
-          <div className="flex flex-col gap-1">
-            <h3 className="text-2xl font-bold max-sm:text-xl">Client Service</h3>
-            <p className="text-lg max-sm:text-base">After-sale Service</p>
-            <p className="text-lg max-sm:text-base">Free Insurance</p>
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Talentos</h3>
+            <p className="text-gray-400">
+              Empoderando mulheres através da costura e do artesanato sustentável.
+            </p>
           </div>
-
-          <div className="flex flex-col gap-1">
-            <h3 className="text-2xl font-bold max-sm:text-xl">Our Brand</h3>
-            <p className="text-lg max-sm:text-base">The Company</p>
-            <p className="text-lg max-sm:text-base">The Excellence</p>
-            <p className="text-lg max-sm:text-base">International Awards</p>
-            <p className="text-lg max-sm:text-base">Our Story</p>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/shop" className="text-gray-400 hover:text-white">
+                  Loja
+                </Link>
+              </li>
+              <li>
+                <Link to="/artesaos" className="text-gray-400 hover:text-white">
+                  Artesãs
+                </Link>
+              </li>
+              <li>
+                <Link to="/sobre" className="text-gray-400 hover:text-white">
+                  Sobre
+                </Link>
+              </li>
+              <li>
+                <Link to="/contato" className="text-gray-400 hover:text-white">
+                  Contato
+                </Link>
+              </li>
+            </ul>
           </div>
-
-          <div className="flex flex-col gap-1">
-            <h3 className="text-2xl font-bold max-sm:text-xl">Luxury Clothing</h3>
-            <p className="text-lg max-sm:text-base">Special Edition</p>
-            <p className="text-lg max-sm:text-base">Summer Edition</p>
-            <p className="text-lg max-sm:text-base">Unique Collection</p>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Categorias</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/shop/vestidos" className="text-gray-400 hover:text-white">
+                  Vestidos
+                </Link>
+              </li>
+              <li>
+                <Link to="/shop/blusas" className="text-gray-400 hover:text-white">
+                  Blusas
+                </Link>
+              </li>
+              <li>
+                <Link to="/shop/acessorios" className="text-gray-400 hover:text-white">
+                  Acessórios
+                </Link>
+              </li>
+              <li>
+                <Link to="/shop/conjuntos" className="text-gray-400 hover:text-white">
+                  Conjuntos
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contato</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>Email: contato@talentos.com.br</li>
+              <li>Telefone: (11) 99999-9999</li>
+              <li>Endereço: São Paulo, SP</li>
+            </ul>
           </div>
         </div>
-        <div className="flex flex-col gap-8 my-20">
-          <p className="flex justify-center items-center text-2xl gap-2 max-sm:text-xl">Worldwide / English <HiChevronDown /></p>
-          <h2 className="text-6xl font-light text-center max-sm:text-5xl">FASHION</h2>
-          <p className="text-base text-center max-sm:text-sm">All rights reserved ©2024</p>
-          <ul className="flex justify-center items-center gap-7 text-base max-sm:text-sm max-[350px]:flex-col max-[350px]:gap-5">
-            <li>Cookie Policy</li>
-            <li>Privacy Policy</li>
-            <li>Legal Notes</li>
-          </ul>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Talentos. Todos os direitos reservados.</p>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
+
 export default Footer;

@@ -1,3 +1,4 @@
+import { products } from "../data/products";
 import ProductGrid from "./ProductGrid";
 import ProductGridWrapper from "./ProductGridWrapper";
 
@@ -10,7 +11,7 @@ const HomeCollectionSection = () => {
         </h2>
       </div>
       <ProductGridWrapper limit={6}>
-        <ProductGrid />
+        <ProductGrid products={products} />
       </ProductGridWrapper>
     </div>
   );

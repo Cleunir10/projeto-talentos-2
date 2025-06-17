@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Button,
   ProductGrid,
@@ -6,12 +6,29 @@ import {
   ShowingSearchPagination,
 } from "../components";
 import { Form, useSearchParams } from "react-router-dom";
+import { products } from "../data/products";
 
 const Search = () => {
   const [searchParams] = useSearchParams();
+  const query = searchParams.get("q") || "";
+  const [searchResults, setSearchResults] = useState(products);
   const [currentPage, setCurrentPage] = useState<number>(
     parseInt(searchParams.get("page") || "1")
   );
+
+  useEffect(() => {
+    if (query) {
+      const filtered = products.filter(
+        (product) =>
+          product.name.toLowerCase().includes(query.toLowerCase()) ||
+          product.description.toLowerCase().includes(query.toLowerCase()) ||
+          product.artesao.toLowerCase().includes(query.toLowerCase())
+      );
+      setSearchResults(filtered);
+    } else {
+      setSearchResults(products);
+    }
+  }, [query]);
 
   return (
     <div className="max-w-screen-2xl mx-auto">
@@ -31,7 +48,7 @@ const Search = () => {
       </Form>
 
       <ProductGridWrapper searchQuery={searchParams.get("query")!} page={currentPage}>
-        <ProductGrid />
+        <ProductGrid products={searchResults} />
       </ProductGridWrapper>
 
       <ShowingSearchPagination page={currentPage} setCurrentPage={setCurrentPage} />

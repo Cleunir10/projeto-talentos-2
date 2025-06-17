@@ -2,39 +2,59 @@
   "products": [
     {
       "id": "1",
-      "title": "Luxury Dress",
-      "image": "product image 1.jpg",
-      "category": "special-edition",
-      "price": 3500,
+      "title": "Vestido Sustentável Floral",
+      "image": "vestido-floral.jpg",
+      "category": "vestidos",
+      "price": 189.90,
       "popularity": 5,
-      "stock": 10
+      "stock": 10,
+      "description": "Vestido confeccionado com tecidos reaproveitados, ideal para ocasiões especiais",
+      "artesao": "Maria Silva",
+      "materiais": ["Algodão reciclado", "Retalhos de seda"],
+      "tamanhos": ["P", "M", "G"],
+      "cores": ["Azul", "Rosa"]
     },
     {
       "id": "2",
-      "title": "Luxury Black Clothing",
-      "image": "product image 2.jpg",
-      "category": "luxury-collection",
-      "price": 1050,
+      "title": "Blusa Artesanal Bordada",
+      "image": "blusa-bordada.jpg",
+      "category": "blusas",
+      "price": 129.90,
       "popularity": 4,
-      "stock": 20
+      "stock": 15,
+      "description": "Blusa com bordados tradicionais, feita à mão com fios de algodão",
+      "artesao": "Ana Oliveira",
+      "materiais": ["Algodão orgânico", "Fios de bordado"],
+      "tamanhos": ["P", "M", "G"],
+      "cores": ["Branco", "Bege"]
     },
     {
       "id": "3",
-      "title": "Luxury Blue Dress",
-      "image": "product image 3.jpg",
-      "category": "summer-edition",
-      "price": 5000,
-      "popularity": 3,
-      "stock": 5
+      "title": "Bolsa Eco-Friendly",
+      "image": "bolsa-eco.jpg",
+      "category": "acessorios",
+      "price": 159.90,
+      "popularity": 5,
+      "stock": 8,
+      "description": "Bolsa confeccionada com retalhos de jeans e couro sintético reciclado",
+      "artesao": "Carla Santos",
+      "materiais": ["Jeans reciclado", "Couro sintético"],
+      "tamanhos": ["Único"],
+      "cores": ["Azul", "Preto"]
     },
     {
       "id": "4",
-      "title": "Special Brown Dress",
-      "image": "product image 4.jpg",
-      "category": "unique-collection",
-      "price": 2500,
-      "popularity": 2,
-      "stock": 15
+      "title": "Conjunto Casual Sustentável",
+      "image": "conjunto-casual.jpg",
+      "category": "conjuntos",
+      "price": 249.90,
+      "popularity": 4,
+      "stock": 12,
+      "description": "Conjunto de calça e blusa feitos com tecidos sustentáveis",
+      "artesao": "Juliana Costa",
+      "materiais": ["Algodão reciclado", "Malha sustentável"],
+      "tamanhos": ["P", "M", "G"],
+      "cores": ["Preto", "Cinza"]
     },
     {
       "id": "5",
@@ -606,6 +626,58 @@
       "email": "clpebrjr@gmail.com",
       "password": "123",
       "confirmPassword": "123"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Vestidos",
+      "description": "Vestidos únicos e sustentáveis"
+    },
+    {
+      "id": "2",
+      "name": "Blusas",
+      "description": "Blusas artesanais e bordadas"
+    },
+    {
+      "id": "3",
+      "name": "Acessórios",
+      "description": "Acessórios eco-friendly"
+    },
+    {
+      "id": "4",
+      "name": "Conjuntos",
+      "description": "Conjuntos sustentáveis"
+    }
+  ],
+  "artesaos": [
+    {
+      "id": "1",
+      "nome": "Maria Silva",
+      "especialidade": "Vestidos",
+      "historia": "Costureira há 15 anos, especialista em reaproveitamento de tecidos",
+      "produtos": ["1"]
+    },
+    {
+      "id": "2",
+      "nome": "Ana Oliveira",
+      "especialidade": "Bordados",
+      "historia": "Bordadeira tradicional, preservando técnicas ancestrais",
+      "produtos": ["2"]
+    },
+    {
+      "id": "3",
+      "nome": "Carla Santos",
+      "especialidade": "Acessórios",
+      "historia": "Especialista em upcycling de materiais têxteis",
+      "produtos": ["3"]
+    },
+    {
+      "id": "4",
+      "nome": "Juliana Costa",
+      "especialidade": "Conjuntos",
+      "historia": "Designer de moda sustentável",
+      "produtos": ["4"]
     }
   ]
 }

@@ -1,7 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
+  Artesaos,
   Cart,
   Checkout,
+  Contato,
   HomeLayout,
   Landing,
   Login,
@@ -12,6 +14,7 @@ import {
   Shop,
   SingleOrderHistory,
   SingleProduct,
+  Sobre,
   UserProfile,
 } from "./pages";
 import { checkoutAction, searchAction } from "./actions/index";
@@ -79,7 +82,19 @@ const router = createBrowserRouter([
       {
         path: "order-history/:id",
         element: <SingleOrderHistory />,
-        loader: singleOrderLoader
+        loader: singleOrderLoader,
+      },
+      {
+        path: "artesaos",
+        element: <Artesaos />,
+      },
+      {
+        path: "sobre",
+        element: <Sobre />,
+      },
+      {
+        path: "contato",
+        element: <Contato />,
       },
     ],
   },

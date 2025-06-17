@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
   id: string;
   title: string;
   image: string;
@@ -6,36 +6,60 @@ interface Product {
   price: number;
   popularity: number;
   stock: number;
+  description: string;
+  artesao: string;
+  materiais: string[];
+  tamanhos: string[];
+  cores: string[];
 }
 
-interface ProductInCart extends Product {
-  id: string;
-  quantity: number;
-  size: string;
-  color: string;
-  stock: number;
-}
-
-interface User {
+export interface Category {
   id: string;
   name: string;
-  lastname: string;
-  email: string;
-  role: string;
-  password: string;
+  description: string;
 }
 
-interface Order {
-  id: number;
-  orderStatus: string;
-  orderDate: string;
+export interface Artesao {
+  id: string;
+  nome: string;
+  especialidade: string;
+  historia: string;
+  produtos: string[];
+}
+
+export interface Order {
+  id: string;
   data: {
-    email: string;
+    emailAddress: string;
+    firstName: string;
+    lastName: string;
+    company?: string;
+    address: string;
+    apartment?: string;
+    city: string;
+    country: string;
+    region: string;
+    postalCode: string;
+    phone: string;
+    paymentType: string;
+    cardNumber: string;
+    nameOnCard: string;
+    expirationDate: string;
+    cvc: string;
   };
-  products: ProductInCart[];
+  products: Product[];
   subtotal: number;
   user: {
     email: string;
     id: number;
   };
+  orderStatus?: string;
+  orderDate?: string;
+}
+
+export interface User {
+  id: number;
+  email: string;
+  password: string;
+  confirmPassword: string;
 }
