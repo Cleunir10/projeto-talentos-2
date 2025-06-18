@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HomeCollectionSection from "../components/HomeCollectionSection";
 
 const Landing = () => {
   return (
@@ -50,16 +51,7 @@ const Landing = () => {
       </section>
 
       {/* Produtos em Destaque */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Produtos em Destaque
-          </h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {/* Aqui serão adicionados os produtos em destaque */}
-          </div>
-        </div>
-      </section>
+      <HomeCollectionSection />
 
       {/* CTA Section */}
       <section className="bg-purple-600 text-white py-16">

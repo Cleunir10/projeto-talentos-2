@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
-import { Product } from "../types/product";
+import { Product } from "../typings.d";
 import { products } from "../data/products";
 
 const SingleProduct = () => {

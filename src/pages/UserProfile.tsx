@@ -6,6 +6,7 @@ import customFetch from "../axios/custom";
 import { checkUserProfileFormData } from "../utils/checkUserProfileFormData";
 import { setLoginStatus } from "../features/auth/authSlice";
 import { store } from "../store";
+import { User } from "../typings.d";
 
 const UserProfile = () => {
   const navigate = useNavigate();

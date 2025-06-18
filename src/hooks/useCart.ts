@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Product } from "../types/product";
+import { Product } from "../typings.d";
 
 interface CartItem extends Product {
   quantity: number;

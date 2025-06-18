@@ -8,6 +8,7 @@ import {
 import customFetch from "../axios/custom";
 import { nanoid } from "nanoid";
 import { formatDate } from "../utils/formatDate";
+import { Order, Product } from "../typings.d";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const { id } = params;
@@ -34,7 +35,7 @@ const SingleOrderHistory = () => {
         <h2 className="text-2xl font-semibold mb-4">
           Order ID: {singleOrder.id}
         </h2>
-        <p className="mb-2">Date: {formatDate(singleOrder.orderDate)}</p>
+        <p className="mb-2">Date: {singleOrder.orderDate ? formatDate(singleOrder.orderDate) : 'Data não disponível'}</p>
         <p className="mb-2">Subtotal: ${ singleOrder.subtotal }</p>
         <p className="mb-2">Shipping: $5</p>
         <p className="mb-2">Tax: ${ singleOrder.subtotal / 5 }</p>
@@ -53,7 +54,7 @@ const SingleOrderHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {singleOrder.products.map((product) => (
+            {singleOrder.products.map((product: Product) => (
               <tr key={nanoid()}>
                 <td className="py-3 px-4 border-b">{product?.title}</td>
                 <td className="py-3 px-4 border-b text-center">

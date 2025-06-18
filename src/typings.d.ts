@@ -1,16 +1,19 @@
 export interface Product {
-  id: string;
+  id: number;
+  name: string;
   title: string;
+  description: string;
+  price: number;
   image: string;
   category: string;
-  price: number;
-  popularity: number;
-  stock: number;
-  description: string;
   artesao: string;
   materiais: string[];
   tamanhos: string[];
   cores: string[];
+  stock: number;
+  featured?: boolean;
+  popularity?: number;
+  quantity?: number;
 }
 
 export interface Category {
@@ -62,4 +65,6 @@ export interface User {
   email: string;
   password: string;
   confirmPassword: string;
+  name?: string;
+  lastname?: string;
 }
