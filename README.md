@@ -28,12 +28,12 @@ Talentos é uma plataforma de e-commerce especializada em produtos artesanais, c
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/talentos.git
+git clone https://github.com/Cleunir10/projeto-talentos-2.git
 ```
 
 2. Instale as dependências:
 ```bash
-cd talentos
+cd projeto-talentos-2
 npm install
 ```
 
@@ -102,6 +102,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📧 Contato
 
-Seu Nome - [@seu_twitter](https://twitter.com/seu_twitter) - email@exemplo.com
+Cleunir - [GitHub](https://github.com/Cleunir10)
 
-Link do Projeto: [https://github.com/seu-usuario/talentos](https://github.com/seu-usuario/talentos)
+Link do Projeto: [https://github.com/Cleunir10/projeto-talentos-2](https://github.com/Cleunir10/projeto-talentos-2)
