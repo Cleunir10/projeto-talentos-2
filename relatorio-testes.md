@@ -177,6 +177,51 @@ Para documentar visualmente os resultados dos testes, siga estas etapas:
    - Mantenha um histórico de mudanças visuais
    - Documente as alterações na interface
 
+### 6.4 Resultados Reais do Pipeline CI/CD
+
+Após a implementação do pipeline CI/CD com GitHub Actions, o workflow foi executado automaticamente a cada push e pull request na branch `main`. Abaixo está um exemplo real dos resultados obtidos durante a execução do pipeline:
+
+```
+> fashion-ecommerce-shop@0.0.0 lint
+> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
+
+/home/runner/work/projeto-talentos-2/projeto-talentos-2/src/pages/OrderHistory.tsx
+Warning:   8:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/home/runner/work/projeto-talentos-2/projeto-talentos-2/src/pages/Shop.tsx
+Warning:   8:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/home/runner/work/projeto-talentos-2/projeto-talentos-2/src/pages/SingleOrderHistory.tsx
+Warning:   13:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/home/runner/work/projeto-talentos-2/projeto-talentos-2/src/utils/withNumberInputWrapper.tsx
+Error:   6:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+Error:   9:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/runner/work/projeto-talentos-2/projeto-talentos-2/src/utils/withSelectInputWrapper.tsx
+Error:   5:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+Error:   8:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 7 problems (4 errors, 3 warnings)
+
+Error: Process completed with exit code 1.
+```
+
+#### Interpretação dos Resultados
+
+- **Warnings**: Foram identificados avisos relacionados ao uso do Fast Refresh do React, recomendando que arquivos exportem apenas componentes.
+- **Errors**: Foram encontrados erros de tipagem, especificamente o uso do tipo `any` em arquivos utilitários, o que não é recomendado em projetos TypeScript.
+- **Exit Code 1**: O pipeline falhou devido à presença de erros de lint, impedindo o prosseguimento para as próximas etapas (como testes ou deploy).
+
+#### Importância
+
+Esses resultados demonstram que o pipeline está atuando como uma barreira de qualidade, impedindo que código com problemas de lint e tipagem seja integrado à branch principal. Isso contribui diretamente para a manutenção da qualidade e confiabilidade do projeto.
+
+#### Próximos Passos
+
+- Corrigir os erros de lint apontados pelo pipeline.
+- Reexecutar o workflow para garantir que o código esteja em conformidade com as regras de qualidade estabelecidas.
+
 ## Resultados dos Testes
 
 ### Testes Unitários
