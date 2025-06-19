@@ -202,4 +202,52 @@ Para documentar visualmente os resultados dos testes, siga estas etapas:
 2. REDUX TOOLKIT. Documentação oficial do Redux Toolkit. Disponível em: https://redux-toolkit.js.org/
 3. JEST. Documentação oficial do Jest. Disponível em: https://jestjs.io/
 4. REACT TESTING LIBRARY. Documentação oficial. Disponível em: https://testing-library.com/docs/react-testing-library/intro/
-5. TAILWIND CSS. Documentação oficial. Disponível em: https://tailwindcss.com/ 
+5. TAILWIND CSS. Documentação oficial. Disponível em: https://tailwindcss.com/
+
+### 4.2 Exemplo Real de Pipeline CI/CD com GitHub Actions
+
+Abaixo está um exemplo real de configuração de pipeline CI/CD implementado no projeto, utilizando GitHub Actions para rodar testes, lint e preparar para deploy automático:
+
+```yaml
+name: CI/CD Talentos
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar lint
+        run: npm run lint
+
+      - name: Rodar testes
+        run: npm test
+
+      # Exemplo de deploy automático (ajuste conforme seu ambiente)
+      # - name: Deploy para produção
+      #   run: |
+      #     echo "Deploy automatizado aqui"
+      #   if: success()
+
+      - name: Notificar falha
+        if: failure()
+        run: |
+          echo "Falha na pipeline! Verifique os logs."
+```
+
+Esse workflow garante que todo push ou pull request na branch `main` será automaticamente verificado quanto à qualidade do código e funcionamento dos testes, promovendo maior segurança e qualidade contínua no desenvolvimento do projeto. 
