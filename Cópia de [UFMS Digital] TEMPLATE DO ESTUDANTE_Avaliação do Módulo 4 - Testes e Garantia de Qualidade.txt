@@ -1,0 +1,45 @@
+﻿TEMPLATE  DE BASE PARA TESTES E GARANTIA DE QUALIDADE
+
+
+Relatório final da ação de extensão
+
+
+AVALIAÇÃO DO MÓDULO 4 - TESTES E GARANTIA DE QUALIDADE
+
+
+
+
+Projeto de Extensão: Trilhas formativas para aprendizagem online (AQOMV.130421)
+
+
+Nome completo: Nome completo do estudante
+Disciplina: Nome da Disciplina
+Semestre letivo: Selecione
+Curso: Nome do Curso
+
+
+1. Introdução
+Apresente uma breve visão geral do projeto de software web e a importância das atividades de verificação, validação e teste (VV&T) para garantir a qualidade e a confiabilidade do produto final.
+2. Aplicação de VV&T no Projeto
+Descreva como as atividades de verificação, validação e teste são aplicadas no projeto de software web. Considere os seguintes aspectos:
+* Verificação: Como a verificação é realizada para garantir que o software atende aos requisitos especificados? Descreva os métodos e técnicas utilizadas.
+* Validação: Como a validação é conduzida para assegurar que o software atende às necessidades e expectativas dos usuários finais? Inclua exemplos de atividades de validação.
+* Teste: Quais tipos de testes são aplicados (e.g., testes unitários, testes de integração, testes de sistema)? Como os testes são realizados e que ferramentas são utilizadas?
+3. Desafios na Aplicação de VV&T
+Identifique e discuta os principais desafios enfrentados na aplicação de VV&T em projetos de ciência de dados. Considere:
+* Complexidade dos Software: Como a complexidade e a variabilidade do domínio ao redor do software impactam a aplicação de VV&T?
+* Ambiente de Teste: Quais são os desafios relacionados à criação e manutenção de ambientes de teste que simulam condições reais de operação?
+* Validação de Interface: Quais são as dificuldades na validação da interface web?
+4. Estratégias para Superar Desafios
+Descreva como você planeja superar os desafios identificados na aplicação de VV&T. Considere estratégias como:
+* Automatização de Testes: Como a automatização pode ajudar a enfrentar desafios e garantir uma cobertura de testes mais eficiente?
+* Técnicas de Validação Avançadas: Que técnicas adicionais podem ser usadas para validar interfaces web de maneira mais eficaz?
+5. Importância de VV&T
+Discuta a importância das atividades de verificação, validação e teste para garantir a qualidade e a confiabilidade do produto final. Inclua pontos como:
+* Garantia de Qualidade: Como VV&T contribui para a criação de um produto de alta qualidade e que atende aos requisitos do cliente?
+* Redução de Riscos: De que forma VV&T ajuda a identificar e mitigar riscos antes da entrega final?
+* Satisfação do Usuário: Como a aplicação eficaz de VV&T influencia a satisfação e a confiança dos usuários no produto final?
+
+
+Referências
+* Listar as referências citadas no relatório de acordo com norma da ABNT NBR 6023 2018.
