@@ -4,17 +4,7 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import customFetch from "../axios/custom";
 import { formatDate } from "../utils/formatDate";
 import { Order } from "../typings.d";
-
-export const loader = async () => {
-  try {
-    const response = await customFetch.get("/orders");
-    
-    return response.data;
-  } catch (error) {
-    console.error("Failed to fetch orders:", error);
-    return [];
-  }
-};
+import { loader } from "./OrderHistory.loader";
 
 const OrderHistory = () => {
   const [user] = useState(JSON.parse(localStorage.getItem("user") || "{}"));

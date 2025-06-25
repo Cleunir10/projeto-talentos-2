@@ -9,12 +9,7 @@ import customFetch from "../axios/custom";
 import { nanoid } from "nanoid";
 import { formatDate } from "../utils/formatDate";
 import { Order, Product } from "../typings.d";
-
-export const loader = async ({ params }: LoaderFunctionArgs) => {
-  const { id } = params;
-  const response = await customFetch(`orders/${id}`);
-  return response.data;
-};
+import { loader } from "./SingleOrderHistory.loader";
 
 const SingleOrderHistory = () => {
   const [user] = useState(JSON.parse(localStorage.getItem("user") || "{}"));

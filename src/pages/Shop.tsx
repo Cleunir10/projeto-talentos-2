@@ -4,12 +4,7 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { ShopBanner, ShopPageContent } from "../components";
-
-export const shopCategoryLoader = async ({ params }: LoaderFunctionArgs) => {
-  const { category } = params;
-
-  return category;
-};
+import { shopCategoryLoader } from "./Shop.loader";
 
 const Shop = () => {
   const category = useLoaderData() as string;
