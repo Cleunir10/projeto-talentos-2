@@ -1,13 +1,12 @@
-
 interface WithSelectInputWrapperProps {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
-const WithSelectInputWrapper = (Component: any) => {
-  return function (props: WithSelectInputWrapperProps) {
+function WithSelectInputWrapper<P extends object>(Component: React.ComponentType<P>) {
+  return function (props: WithSelectInputWrapperProps & P) {
     return <Component {...props} />;
   };
-};
+}
 export default WithSelectInputWrapper;
