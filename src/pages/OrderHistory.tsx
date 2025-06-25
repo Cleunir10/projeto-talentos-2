@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
-import customFetch from "../axios/custom";
 import { formatDate } from "../utils/formatDate";
 import { Order } from "../typings.d";
-import { loader } from "./OrderHistory.loader";
 
 const OrderHistory = () => {
   const [user] = useState(JSON.parse(localStorage.getItem("user") || "{}"));

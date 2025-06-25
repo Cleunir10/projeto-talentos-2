@@ -1,10 +1,5 @@
-import {
-  LoaderFunctionArgs,
-  useLoaderData,
-  useSearchParams,
-} from "react-router-dom";
+import { useLoaderData, useSearchParams } from "react-router-dom";
 import { ShopBanner, ShopPageContent } from "../components";
-import { shopCategoryLoader } from "./Shop.loader";
 
 const Shop = () => {
   const category = useLoaderData() as string;
